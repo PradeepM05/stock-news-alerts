@@ -1,0 +1,17 @@
+{
+    "watchlist": [
+      {
+        "ticker": "AAPL",
+        "name": "Apple Inc.",
+        "threshold": 0.7
+      },
+      {
+        "ticker": "MSFT",
+        "name": "Microsoft Corporation",
+        "threshold": 0.7
+      }
+    ],
+    "email": {
+      "recipient": "pradeep.mech1gm@gmail.com"
+    }
+  }
