@@ -1,8 +1,11 @@
 import logging
+import time
 import json
+import sys
 import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from datetime import datetime
-from src.database import AlertDatabase
+from src.database.storage import AlertDatabase
 from src.mcp.context import NewsContext
 from src.mcp.controller import MCPController
 from src.mcp.operators import (
@@ -11,6 +14,7 @@ from src.mcp.operators import (
     SentimentAnalysisOperator,
     AlertGenerationOperator
 )
+from src.collectors.finviz_scraper import get_finviz_news
 
 # Setup logging
 logging.basicConfig(
@@ -53,10 +57,12 @@ def main():
         ]
         
         # Process each stock in watchlist
-        for stock in config['watchlist']:
+        for i, stock in enumerate(config['watchlist']):
+            # Add delay between stocks (except the first one)
+            if i > 0:
+                time.sleep(5)  # 5 second delay between stocks
             ticker = stock['ticker']
             threshold = stock.get('threshold', 0.7)
-            
             logger.info(f"Processing stock: {ticker}")
             
             # Create context for this stock

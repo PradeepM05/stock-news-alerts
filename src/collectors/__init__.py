@@ -1,4 +1,5 @@
-from .yahoo_finance import get_yahoo_news
+# src/collectors/__init__.py
+#from .yahoo_finance import get_yahoo_news
 from .rss_reader import get_rss_news
 from .finviz_scraper import get_finviz_news
 
@@ -17,8 +18,8 @@ def collect_all_news(ticker):
     news_dict = {}
     
     # Add each source's results to the dictionary
-    for item in get_yahoo_news(ticker):
-        news_dict[item['source_id']] = item
+    #for item in get_yahoo_news(ticker):
+    #    news_dict[item['source_id']] = item
         
     for item in get_rss_news(ticker):
         news_dict[item['source_id']] = item

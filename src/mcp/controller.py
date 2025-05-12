@@ -2,6 +2,7 @@ import logging
 from typing import List, Dict, Any, Optional
 from .context import NewsContext
 from .operators import ContextOperator
+from src.analysis import SentimentAnalyzer
 
 logger = logging.getLogger(__name__)
 
