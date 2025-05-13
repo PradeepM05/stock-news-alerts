@@ -3,12 +3,12 @@
       {
         "ticker": "NVDA",
         "name": "Nvidia Inc.",
-        "threshold": 0.7
+        "threshold": 0.8
       },
       {
         "ticker": "PLTR",
         "name": "Palantir",
-        "threshold": 0.7
+        "threshold": 0.8
       }
     ],
     "email": {
