@@ -1,13 +1,13 @@
 {
     "watchlist": [
       {
-        "ticker": "AAPL",
-        "name": "Apple Inc.",
+        "ticker": "NVDA",
+        "name": "Nvidia Inc.",
         "threshold": 0.7
       },
       {
-        "ticker": "MSFT",
-        "name": "Microsoft Corporation",
+        "ticker": "PLTR",
+        "name": "Palantir",
         "threshold": 0.7
       }
     ],
